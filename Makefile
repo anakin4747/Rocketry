@@ -27,6 +27,9 @@ build: setup.py
 # Install project dependencies
 deps: venv
 	$(PIP) install -r requirements.txt
+
+install: clean deps build
+	$(PIP) install dist/*.tar.gz
    
 
 # Clean up generated files
